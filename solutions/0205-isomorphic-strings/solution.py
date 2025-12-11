@@ -12,19 +12,4 @@ class Solution:
         for i in range(len(s)):
             if arr1.index(s[i])!=arr2.index(t[i]):
                 return False
-        # for i in range(len(s)-1):
-        #     s1=1
-        #     t1=1
-        #     if s.count(s[i])!=t.count(t[i]):
-        #         return False
-        #     if s[i]==s[i+1]:
-        #         s1+=1
-        #     if t[i]==t[i+1]:
-        #         t1+=1
-        #     if t1==s1:
-        #         continue
-            
-        #     else:
-        #         return False
-            
         return True
