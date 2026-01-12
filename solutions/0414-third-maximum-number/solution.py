@@ -4,6 +4,5 @@ class Solution:
         nums.sort()
         if(len(nums)>=3):
             return nums[-3]
-        # if(nums[-3]):
-        #     return nums[-3]
-        return nums[-1]
+        else:
+            return max(nums)
