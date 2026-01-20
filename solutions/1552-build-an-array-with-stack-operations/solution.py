@@ -1,16 +1,14 @@
 class Solution:
     def buildArray(self, target: List[int], n: int) -> List[str]:
+        s=[]
         ans=[]
-        val=[]
-        for i in range(1,max(target)+1):
-            if i in target:
-                ans.append("Push")
-            else:
-                ans.append("Push")
+        for i in range(1,n+1):
+            s.append(i)
+            ans.append("Push")
+            if s[-1] not in target:
+                s.pop()
                 ans.append("Pop")
-            # if len(target)==len(ans):
-            #     break
+            if target==s:
+                return ans
         return ans
-        
-
 
