@@ -3,9 +3,9 @@ class Solution:
         nums.sort()
         i=0
         j=len(nums)-1
-        s=[]
+        arr=[]
         while i<j:
-            s.append(nums[i]+nums[j])
+            arr.append(nums[i]+nums[j])
             i+=1
             j-=1
-        return max(s)
+        return max(arr)
