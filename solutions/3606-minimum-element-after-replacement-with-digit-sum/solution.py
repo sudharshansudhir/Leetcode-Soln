@@ -3,11 +3,9 @@ class Solution:
         ans=[]
         for i in nums:
             i=str(i)
-            s=0
-            for j in i:
-                s+=int(j)
-            ans.append(int(s))
-
+            j=0
+            for ii in i:
+                j+=int(ii)
+            ans.append(j)
         return min(ans)
-
 
