@@ -1,8 +1,10 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
-        a=format(n,'032b')
-        s=str(a)
-        s=s[::-1]
-        aa=int(s,2)
-        return aa
-
+        # n=n%32
+        a=str(bin(n)[2:])
+        le=len(a)
+        while len(a)<32:
+            a="0"+a
+        # print(a)
+        a=a[::-1]
+        return int(a,2)
