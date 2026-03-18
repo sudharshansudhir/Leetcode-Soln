@@ -1,51 +1,23 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        s=[]
-        row=len(matrix)
-        col=len(matrix[0])
-        up=True
-        seq=True
-        i=j=k1=k2=0
-        n=len(matrix)*len(matrix[0])
-        while n>0:
-            print(i,j,s)
-            if(up and seq):
-                s.append(matrix[i][j])
-                j+=1
-                if(j==len(matrix[0])-k1):
-                    j-=1
-                    i+=1
-                    k2+=1
-                    up=False
-                    seq=False
-            elif((not up) and (not seq)):
-                s.append(matrix[i][j])
-                i+=1
-                if(i==len(matrix)-k1):
-                    i-=1
-                    j-=1
-                    k1+=1
-                    seq=True
-                    # up=False
-            elif(seq and not up):
-                s.append(matrix[i][j])
-                j-=1
-                if(j==-2+k1):
-                    up=True
-                    seq=False
-                    j+=1
-                    # k1+=1
-                    i-=1
-            elif(not seq and up):
-                s.append(matrix[i][j])
-                i-=1
-                if(i==-1+k2):
-                    i+=1
-                    # k2+=1
-                    j+=1
-                    seq=True
-                    up=True
-            n-=1
-        print(s)
-        return s
+        res=[]
+        left,right=0,len(matrix[0])-1
+        top,bottom=0,len(matrix)-1
 
+        while top<=bottom and left<=right:
+            for i in range(left,right+1):
+                res.append(matrix[top][i])
+            top+=1
+            for i in range(top,bottom+1):
+                res.append(matrix[i][right])
+            right-=1
+            if top<=bottom:
+                for i in range(right,left-1,-1):
+                    res.append(matrix[bottom][i])
+                bottom-=1
+            if left<=right:
+                for i in range(bottom,top-1,-1):
+                    res.append(matrix[i][left])
+                left+=1
+        return res
+            
