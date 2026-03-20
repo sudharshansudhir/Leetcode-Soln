@@ -5,12 +5,14 @@ class Solution:
             if i in "aeiouAEIOU":
                 vow.append(i)
         vow=vow[::-1]
-        ans=""
-        j=0
+        an=""
+        k=0
         for i in s:
-            if not i in "aeiouAEIOU":
-                ans+=i
+            if i in "aeiouAEIOU":
+                an+=vow[k]
+                k+=1
             else:
-                ans+=vow[j]
-                j+=1
-        return ans
+                an+=i
+        return an
+
+
