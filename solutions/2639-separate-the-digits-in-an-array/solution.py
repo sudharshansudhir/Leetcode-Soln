@@ -3,6 +3,6 @@ class Solution:
         ans=[]
         for i in nums:
             i=str(i)
-            for j in i:
-                ans.append(int(j))
+            for e in i:
+                ans.append(int(e))
         return ans
