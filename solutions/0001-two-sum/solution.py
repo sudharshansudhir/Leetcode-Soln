@@ -7,5 +7,3 @@ class Solution:
                         return i,j
                 else:
                     continue
-
-        
