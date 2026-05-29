@@ -1,11 +1,10 @@
 class Solution:
     def minElement(self, nums: List[int]) -> int:
-        ans=[]
+        arr=[]
         for i in nums:
             i=str(i)
-            j=0
-            for ii in i:
-                j+=int(ii)
-            ans.append(j)
-        return min(ans)
-
+            t=0
+            for e in i:
+                t+=int(e)
+            arr.append(t)
+        return min(arr)
