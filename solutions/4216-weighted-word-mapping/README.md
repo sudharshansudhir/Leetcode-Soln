@@ -1,4 +1,4 @@
-<p>You are given an array of strings <code>words</code>, where each string represents a word containing lowercase English letters.</p>
+<h2><a href="https://leetcode.com/problems/weighted-word-mapping">Weighted Word Mapping</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given an array of strings <code>words</code>, where each string represents a word containing lowercase English letters.</p>
 
 <p>You are also given an integer array <code>weights</code> of length 26, where <code>weights[i]</code> represents the weight of the <code>i<sup>th</sup></code> lowercase English letter.</p>
 
